@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         fclose($file);
 
         // Send a success response with the filename
-        echo "Data received and saved successfully in $file_path";
+        echo "[+] Sended $file_path";
     } else {
         // If unable to open the file for writing
         echo "Failed to open the file for writing.";
