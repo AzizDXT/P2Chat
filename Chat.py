@@ -27,11 +27,4 @@ data = {
 url = 'http://bore.pub:1983/Save.php'
 response = requests.post(url, data=data)
 
-# Check if the request was successful (HTTP status code 200)
-if response.status_code == 200:
-    print('Request was successful!')
-    print('Response content:', response.text)
-else:
-    print('Request failed with status code:', response.status_code)
-
 #----------Reception part-----------
