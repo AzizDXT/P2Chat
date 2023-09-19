@@ -34,6 +34,6 @@ clear
 echo Running Service...
 sleep 1
 clear
-gnome-terminal -- python3 Message.py
+gnome-terminal -- python3 Chat.py
 exit
 
