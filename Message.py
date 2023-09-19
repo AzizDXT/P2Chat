@@ -17,24 +17,35 @@ def send_message():
     os.system(f"gnome-terminal -- php -S 127.0.0.1:{portl}")
     print("Account ID (XXXXX-XXXXX-XXXXX):")
     input_string = input("Or Enter to Skip: ")
+    print("Target Account ID (XXXXX-XXXXX-XXXXX):")
+    Tinput_string = input("Or Enter to Skip: ")
     pattern = r'(\d+)-(\d+)-(\d+)'
     match = re.search(pattern, input_string)
+    Tmatch = re.search(pattern, Tinput_string)
+
     if match:
         # Extract the numbers from the match
         port = match.group(1)
         port1 = match.group(2)
         port2 = match.group(3)
     else:
-        print = print("=" * 40)
+        print("=" * 40)
         print("Set Public Port :")
         port = input("Public Port 1: ")
         port1 = input("Public Port 2: ")
         port2 = input("Public Port 3: ")
+
+    if Tmatch:
+        Tport = Tmatch.group(1)
+        Tport1 = Tmatch.group(2)
+        Tport2 = Tmatch.group(3)
+    else:
         print("=" * 40)
         print("Set Targets Port :")
         Tport = input("Target Port 1: ")
         Tport1 = input("Target Port 2: ")
         Tport2 = input("Target Port 3: ")
+        
     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port}")
     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port1}")
     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port2}")
