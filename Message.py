@@ -25,10 +25,16 @@ def send_message():
         port1 = match.group(2)
         port2 = match.group(3)
     else:
+        print = print("=" * 40)
+        print("Set Public Port :")
         port = input("Public Port 1: ")
         port1 = input("Public Port 2: ")
         port2 = input("Public Port 3: ")
-
+        print("=" * 40)
+        print("Set Targets Port :")
+        Tport = input("Target Port 1: ")
+        Tport1 = input("Target Port 2: ")
+        Tport2 = input("Target Port 3: ")
     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port}")
     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port1}")
     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port2}")
@@ -55,9 +61,9 @@ def send_message():
                 "Message": f"{X2}",
             }
             urls = [
-                f'http://bore.pub:{port}/Save.php',
-                f'http://bore.pub:{port1}/Save.php',  
-                f'http://bore.pub:{port2}/Save.php',
+                f'http://bore.pub:{Tport}/Save.php',
+                f'http://bore.pub:{Tport1}/Save.php',  
+                f'http://bore.pub:{Tport2}/Save.php',
             ]
 
             for url in urls:
