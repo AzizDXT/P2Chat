@@ -53,8 +53,7 @@ def send_message():
     N = input("Name: ")
 
     while True:
-        print("Type Message (or 'exit' to quit): ")
-        X = input("")
+        X = input("Type Message (or 'exit' to quit): ")
         if X.lower() == "exit":
             break
 
@@ -107,10 +106,13 @@ def process_text_files_in_directory(directory_path="."):
                             received_data = data.get("Message", "N/A")
                             decoded_message_bytes = base64.b64decode(received_data)
                             message = decoded_message_bytes.decode("utf-8")
+                            print("")
                             print("=" * 40)
                             print(f"Received from {name}:")
                             print(f"Message: {message}")
                             print("=" * 40)
+                            print("Type Message (or 'exit' to quit): ")
+
                         except json.JSONDecodeError as e:
                             print(f"Failed to parse content as JSON in {file_name}: {str(e)}")
                     
