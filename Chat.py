@@ -53,8 +53,8 @@ def send_message():
     N = input("Name: ")
 
     while True:
-        X = input("Type Message (or 'exit' to quit): ")
-        print("")
+        print("Type Message (or 'exit' to quit): ")
+        X = input("")
         if X.lower() == "exit":
             break
 
