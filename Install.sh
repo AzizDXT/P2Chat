@@ -1,5 +1,5 @@
 sudo apt-get update -y
-sudo apt-get install python3 python2 python3-pip figlet lolcat git php dbus-x11 gnome-terminal -y & sudo apt-get update -y & pip install re cryptography requests base64 json time os threading & sudo apt-get install python3 figlet & sudo apt-get install python3 python2 python3-pip figlet lolcat git php dbus-x11 gnome-terminal -y
+sudo apt-get install python3 python2 python3-pip figlet lolcat git php dbus-x11 gnome-terminal -y ; sudo apt-get update -y ; pip install re cryptography requests base64 json time os threading ; sudo apt-get install python3 figlet ; sudo apt-get install python3 python2 python3-pip figlet lolcat git php dbus-x11 gnome-terminal -y
 mkdir -p ~/.local/share/fonts/figlet-fonts/
 git clone https://github.com/xero/figlet-fonts.git ~/.local/share/fonts/figlet-fonts/
 clear
