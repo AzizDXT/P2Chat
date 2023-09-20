@@ -5,6 +5,7 @@ import json
 import time
 import re
 import threading
+from termcolor import colored
 
 def send_message():
     os.system("clear")
@@ -49,7 +50,8 @@ def send_message():
     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port}")
     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port1}")
     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port2}")
-    print("Run Servers | 4 Windows")
+    CO = colored("Run Servers | 4 Windows", "green")
+    print(f"{CO}")
     N = input("Name: ")
 
     while True:
@@ -81,10 +83,12 @@ def send_message():
                     response = requests.post(url, data=data)
 
                     if response.status_code == 200:
-                        
+                        RE = colored("[+] Sended","green")
+                        print(f"{RE}")
                         break  # Exit the loop if the message was sent successfully
                     else:
-                        print("Failed to send message")
+                     FL = colored("[-] Not Sended","red")
+                     print(f"{FL}")
                 except Exception as e:
                     print(f"Error sending message to {url}: {str(e)}")
 
