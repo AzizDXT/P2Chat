@@ -34,6 +34,5 @@ clear
 echo Running Service...
 sleep 1
 clear
-python3 Chat.py
 exit
 
