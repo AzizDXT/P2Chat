@@ -1,6 +1,6 @@
 sudo apt-get update -y
 sudo apt-get install python3 python2 python3-pip figlet lolcat git php dbus-x11 gnome-terminal tar -y
-pip install  cryptography requests json time os threading folium geopy psutil wmi Dispatch ping3 termcolor re base64
+pip install cryptography requests json time os threading folium geopy psutil wmi Dispatch ping3 termcolor re base64
 sudo apt-get update -y
 mkdir -p ~/.local/share/fonts/figlet-fonts/
 git clone https://github.com/xero/figlet-fonts.git ~/.local/share/fonts/figlet-fonts/
