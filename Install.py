@@ -29,4 +29,7 @@ clear
 echo Running Service...
 sleep 1
 clear
-gnome-terminal -- python3 Chat.py''')
+gnome-terminal -- python3 Chat.py
+figlet -c -f ~/.local/share/fonts/figlet-fonts/3d.flf INFO! | lolcat
+echo Run the tool again next time use this command : "python3 Chat.py"
+''')
