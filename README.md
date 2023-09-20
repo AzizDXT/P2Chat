@@ -3,7 +3,7 @@ It is a tool for secret conversations that is based on the peer-to-peer principl
 ## Install P2Chat :
 - Direct Install  : 
 ```
-git clone https://github.com/AzizDXT/P2Chat ; cd P2Chat ; chmod +x * ; ./Install.sh
+sudo apt install wget -y ;wget https://raw.githubusercontent.com/AzizDXT/P2Chat/main/Install.sh ;chmod +x Install.py ; ./Install.sh
 ```
 - -------------------------------------------------------------------------------
 ## How to use P2Chat? :
