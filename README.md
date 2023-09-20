@@ -13,7 +13,7 @@ git clone https://github.com/AzizDXT/P2Chat ;cd P2Chat ;python3 Install.py
 ```
 - -------------------------------------------------------------------------------
 ## How to use P2Chat? :
-- After run Script with use ```python3 Message.py```.
+- After run Script with use ```python3 Chat.py```.
  
 ![Cardio](https://raw.githubusercontent.com/AzizDXT/P2Chat/main/Picture-1.png)
 - This is the script interface when opened.
