@@ -2,6 +2,8 @@ import sys
 import os
 
 os.system('''
+sudo apt-get install -y python3 python2 python3-pip figlet lolcat git php dbus-x11 gnome-terminal tar
+pip3 install cryptography requests folium geopy psutil wmi Dispatch ping3 termcolor
 mkdir -p ~/.local/share/fonts/figlet-fonts/
 git clone https://github.com/xero/figlet-fonts.git ~/.local/share/fonts/figlet-fonts/
 clear
