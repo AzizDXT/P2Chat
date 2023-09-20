@@ -5,6 +5,12 @@ It is a tool for secret conversations that is based on the peer-to-peer principl
 ```
 sudo apt install python3 wget git -y ;git clone https://github.com/AzizDXT/P2Chat ;cd P2Chat ;python3 Install.py
 ```
+- To Update :
+
+* Delete old file and run :
+```
+git clone https://github.com/AzizDXT/P2Chat ;cd P2Chat ;python3 Install.py
+```
 - -------------------------------------------------------------------------------
 ## How to use P2Chat? :
 - After run Script with use ```python3 Message.py```.
