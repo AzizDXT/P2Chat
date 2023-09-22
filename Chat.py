@@ -56,6 +56,7 @@ def send_message():
      os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port1}")
      os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port2}")
     elif SERVICE == "2":
+     print("Sometimes it may ask for approval. Type yes to continueSometimes it may ask for approval. Type 'yes' to continue")   
      os.system(f"gnome-terminal -- ssh -R {port}:localhost:{portl} serveo.net")    
      os.system(f"gnome-terminal -- ssh -R {port1}:localhost:{portl} serveo.net")    
      os.system(f"gnome-terminal -- ssh -R {port2}:localhost:{portl} serveo.net")    
