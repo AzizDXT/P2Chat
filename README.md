@@ -38,6 +38,4 @@ git clone https://github.com/AzizDXT/P2Chat-BORE ;cd P2Chat-BORE ;python3 Instal
   
 - Set Your real name or nickname.
   
-8- Now you can send and receive messages between you and the other user, and the means of connecting the two of you is the port. You give him from your ports that you opened, and he gives you the ports that he opened, which creates a relatively decentralized link between you and is encrypted with encryption while data traffic passes over the network.
-* Although the IP addresses of Wi-Fi networks have changed, a DNS service has been added to establish the domain and communicate between the sender and the recipient.
-- -------------------------------------------------------------------------------
+8- Now you can send and receive messages between you and the other user, and the means of connecting the two of you is the port. You give him from your ports that you opened, and he gives you the ports that he opened, which creates a relatively decentralized link between you and is encrypted with encryption while data traffic passes over the network. -------------------------------------------------------------------------------
