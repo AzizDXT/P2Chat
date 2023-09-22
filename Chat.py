@@ -14,7 +14,10 @@ def send_message():
     portl = input("Local Port: ")
     if not portl:
         portl = 8080
-
+    print("Choose a communication service (1 or 2) : ")
+    print("1- BORE")
+    print("2- SERVEO")
+    SERVICE = input("Choose :")
     os.system(f"gnome-terminal -- php -S 127.0.0.1:{portl}")
     print("Account ID (XXXXX-XXXXX-XXXXX):")
     input_string = input("Or Enter to Skip: ")
@@ -46,10 +49,19 @@ def send_message():
         Tport = input("Target Port 1: ")
         Tport1 = input("Target Port 2: ")
         Tport2 = input("Target Port 3: ")
-        
-    os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port}")
-    os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port1}")
-    os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port2}")
+
+    if SERVICE == "1" :
+ 
+     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port}")
+     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port1}")
+     os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port2}")
+    elif SERVICE == "2":
+     os.system(f"gnome-terminal -- ssh -R {port}:localhost:{portl} serveo.net")    
+     os.system(f"gnome-terminal -- ssh -R {port1}:localhost:{portl} serveo.net")    
+     os.system(f"gnome-terminal -- ssh -R {port2}:localhost:{portl} serveo.net")    
+    else :
+      print
+
     CO = colored("Run Servers | 4 Windows", "green")
     print(f"{CO}")
     N = input("Name: ")
