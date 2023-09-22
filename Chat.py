@@ -15,8 +15,8 @@ def send_message():
     if not portl:
         portl = 8080
     print("Choose a communication service (1 or 2) : ")
-    print("1- BORE")
-    print("2- SERVEO")
+    print("1 - BORE")
+    print("2 - SERVEO")
     SERVICE = input("Choose :")
     os.system(f"gnome-terminal -- php -S 127.0.0.1:{portl}")
     print("Account ID (XXXXX-XXXXX-XXXXX):")
