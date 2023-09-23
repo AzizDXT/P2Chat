@@ -51,15 +51,15 @@ def send_message():
         Tport2 = input("Target Port 3: ")
 
     if SERVICE == "1" :
- 
+
      os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port}")
      os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port1}")
      os.system(f"gnome-terminal -- ./bore local {portl} --to bore.pub -p {port2}")
     elif SERVICE == "2":
-     print("Sometimes it may ask for approval. Type yes to continueSometimes it may ask for approval. Type 'yes' to continue")   
-     os.system(f"gnome-terminal -- ssh -R {port}:localhost:{portl} serveo.net")    
-     os.system(f"gnome-terminal -- ssh -R {port1}:localhost:{portl} serveo.net")    
-     os.system(f"gnome-terminal -- ssh -R {port2}:localhost:{portl} serveo.net")    
+     print("Sometimes it may ask for approval. Type 'yes' to continue")
+     os.system(f"gnome-terminal -- ssh -R {port}:localhost:{portl} serveo.net")
+     os.system(f"gnome-terminal -- ssh -R {port1}:localhost:{portl} serveo.net")
+     os.system(f"gnome-terminal -- ssh -R {port2}:localhost:{portl} serveo.net")
     else :
       print
 
@@ -88,13 +88,13 @@ def send_message():
             if SERVICE == "1":
              urls = [
                 f'http://bore.pub:{Tport}/Save.php',
-                f'http://bore.pub:{Tport1}/Save.php',  
+                f'http://bore.pub:{Tport1}/Save.php',
                 f'http://bore.pub:{Tport2}/Save.php',
              ]
             elif SERVICE == "2":
                 urls = [
                 f'https://serveo.net:{Tport}/Save.php',
-                f'https://serveo.net:{Tport1}/Save.php',  
+                f'https://serveo.net:{Tport1}/Save.php',
                 f'https://serveo.net:{Tport2}/Save.php',
                 ]
 
@@ -105,15 +105,14 @@ def send_message():
                     if response.status_code == 200:
                         RE = colored("[+] Sended","green")
                         print(f"{RE}")
-                        break  
+                        break
                     else:
                      FL = colored("[-] Not Sended","red")
                      print(f"{FL}")
                 except Exception as e:
-                    print(f"Error sending message to {url}: {str(e)}")
-
+                    print(f"Error sending message")
         except Exception as e:
-            print(f"Error sending message: {str(e)}")
+            print()
 
 def process_text_files_in_directory(directory_path="."):
     try:
@@ -140,10 +139,10 @@ def process_text_files_in_directory(directory_path="."):
 
                         except json.JSONDecodeError as e:
                             print(f"Failed to parse content as JSON in {file_name}: {str(e)}")
-                    
+
                     os.remove(file_path)
-                    
-            time.sleep(1)  
+
+            time.sleep(1)
     except Exception as e:
         print(f"Error: {str(e)}")
 
@@ -152,3 +151,5 @@ if __name__ == "__main__":
     send_thread.start()
 
     process_text_files_in_directory()
+
+
