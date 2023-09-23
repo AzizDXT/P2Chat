@@ -85,14 +85,18 @@ def send_message():
                 "Name": f"{N}",
                 "Message": f"{X2}",
             }
-            urls = [
+            if SERVICE == "1":
+             urls = [
                 f'http://bore.pub:{Tport}/Save.php',
                 f'http://bore.pub:{Tport1}/Save.php',  
                 f'http://bore.pub:{Tport2}/Save.php',
+             ]
+            elif SERVICE == "2":
+                urls = [
                 f'https://serveo.net:{Tport}/Save.php',
                 f'https://serveo.net:{Tport1}/Save.php',  
                 f'https://serveo.net:{Tport2}/Save.php',
-            ]
+                ]
 
             for url in urls:
                 try:
